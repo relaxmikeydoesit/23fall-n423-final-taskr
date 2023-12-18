@@ -1,0 +1,52 @@
+.title {
+    font-size: 2rem;
+
+    font-weight: bold;
+    margin: 20px;
+    color: inherit;
+
+}
+.sub {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: unset;
+    margin: 20px;
+    
+    color: inherit;
+
+}
+
+.form {
+    padding: 50px;
+    background-color: #fbbd08;
+    
+}
+
+.formField {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.formField label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #545454;
+
+}
+
+.formField input {
+    font-size: 18px;
+    height: 40px;
+    width: 750px;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+.formField .submit {
+    margin: 0 auto;
+    width: 300px;
+}

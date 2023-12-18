@@ -10,11 +10,12 @@ body {
   overflow-x: hidden;
   padding-top: 5px;
   background-color: #272727;
+  color: #eeccee;
   /* background-color: #0f292f; */
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  color: #F2EAED;
+  color: #eeccee;
   font-family: "Signika";
 }
 
@@ -29,12 +30,12 @@ a {
   padding: 10px;
   margin: 10px 0px 40px 0px;
 }
-.box p, h1, h2 {
+/* .box p, h1, h2 {
   color: #1f2833;
   font-size: 22px;
   font-family: "Signika";
   text-align: center;
-}
+} */
 
 
 /* .logo {
