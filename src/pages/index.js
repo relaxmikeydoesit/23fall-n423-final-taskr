@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
-import { Card, Grid } from 'semantic-ui-react'
+import { Card, Container, Grid, Image, Input, Segment, Button } from 'semantic-ui-react'
+import BoredBot from './boredbot';
 
 
 export default function Home() {
@@ -10,32 +11,48 @@ export default function Home() {
     <div className={styles.box}>
       <p className={styles.signika}>TASKR  ||  Your life, in focus.</p>
     </div>
-    <Grid centered stackable columns={3}>
-    <Grid.Column color='yellow'>
-    <Card centered
-    href='/top3'
-    header='top3'
-    meta='Top Priorities'
-    description='What 3 Things Do You Want To Accomplish Today?'
+    <div className={styles.page}>
+
+    <Grid padded stackable columns={3}>
+    <Grid.Row className={styles.rowHeight}>
+    <Grid.Column className={styles.rust}>
+    <Container className={styles.container}>
+    <Card centered 
+    href='/boredbot'
+    header='boredbot'
+    meta='bored?'
+    description='Bored? Boredbot is here to help. Boredbot is a chatbot that helps you find something to do when you are bored. Boredbot is a fun way to find something to do when you are bored.'
   />
-   </Grid.Column>
-    <Grid.Column color='blue'>
-  <Card centered
-    href='/schedule'
-    header='schedule'
-    meta='Schedule'
-    description='What Does Your Day Look Like?'
-  />
+  <Button onClick={BoredBot}/>
+
+  </Container>
   </Grid.Column>
-  <Grid.Column color='purple'>
+  <Grid.Column>
+  <Container className={styles.green}>
+<Image src= 'robot-wave.png'
+ size='medium'
+ href='/robot/success' centered />
+</Container>
+</Grid.Column>
+  <Grid.Column className={styles.cyan}>
+    <Container className={styles.container}>
   <Card centered
     href='/strike'
-    header='Strikethrough'
-    meta='strike'
-    description='What Do You Want To Mark Off Your List?'
+    header='STRIKE'
+    meta='Strike It Off Your List'
+    description='ACCOMPLISH MORE, WITH STRIKE. Plan your day, and stick to it. Strike helps you manage and organize your daily To-Do list. Strike it off your list, and gamify productivity.'
   />
-  </Grid.Column>
+</Container>
+  </Grid.Column>  
+  </Grid.Row>
   </Grid>
-    </>
-  )
+
+<Segment color='teal' inverted className={styles.footer}>
+    <p>© 2023 MIKEY LEE. All rights reserved. </p>
+    <p>[Made with lots of swearing, in Indianapolis.]
+    Powered by Next.js and Semantic UI React |  Deployed on Vercel</p>
+  </Segment>
+  </div>
+  </>
+  );
 }

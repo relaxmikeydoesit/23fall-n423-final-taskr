@@ -27,7 +27,7 @@ a {
 .box {
   background-color: #ffcb9b;
   border-radius: 10px;
-  padding: 10px;
+  /* padding: 10px; */
   margin: 10px 0px 40px 0px;
 }
 /* .box p, h1, h2 {

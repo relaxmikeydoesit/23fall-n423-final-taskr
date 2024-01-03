@@ -7,7 +7,7 @@
 .box {
   background-color: #ffcb9b;
   border-radius: 10px;
-  padding: 10px;
+  /* padding: 10px; */
   margin: 10px 0px 40px 0px;
 
 
@@ -18,3 +18,60 @@
   font-family: "Signika";
   text-align: center;
 }
+
+.cyan {
+ background-color: #02a4D3;
+}
+.rust {
+  background-color: #D43002;
+  
+}
+.green {
+  background-color: #02D476;
+}
+.rowHeight {
+  height: 30vh;
+  justify-content: center;
+  /* margin-bottom: 40px; */
+ }
+/* .rowEmpty {
+  height: 10vh;
+  width: 100vw;
+  background-color: #1f2833;
+} */
+ 
+
+
+ .container {
+  padding-top: 50px;
+
+
+  }
+  .footer {
+    background-color: #121212;
+    color: #66fcf1;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Signika";
+    height: 10vh;
+    margin-top:  450px;
+    
+  }
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+  }
+
+  @media screen and (max-width: 700px) {
+    .page {
+      height: 120vh;
+    }
+    /* .footer {
+      margin-bottom: -300px;
+    } */
+  }
+    
