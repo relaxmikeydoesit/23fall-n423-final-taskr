@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
     <div>
       <Header as='h1' className='logo' textAlign='center' color='red'>TASKR</Header>
       <Menu inverted fluid widths={4} stackable>
-        <Menu.Item as={Link} href='/otd'>
+        <Menu.Item as={Link} href='/onthisday/[date].js'>
           otd
         </Menu.Item>
         <Menu.Item as={Link} href='/'>

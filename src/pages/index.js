@@ -1,9 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
-import { Card, Container, Grid, Image, Input, Segment, Button } from 'semantic-ui-react'
-import BoredBot from './boredbot';
+import { Card, Container, Grid, Image, Segment, Button, FormField, Form, Input } from 'semantic-ui-react'
 
+function handleSubmit(e) {
+  e.preventDefault();
+  console.log('submitted', e.target.query);
+}
 
 export default function Home() {
   return (
@@ -18,12 +21,20 @@ export default function Home() {
     <Grid.Column className={styles.rust}>
     <Container className={styles.container}>
     <Card centered 
-    href='/boredbot'
-    header='boredbot'
-    meta='bored?'
-    description='Bored? Boredbot is here to help. Boredbot is a chatbot that helps you find something to do when you are bored. Boredbot is a fun way to find something to do when you are bored.'
-  />
-  <Button onClick={BoredBot}/>
+    href='/onthisday/[date]'
+    header='Day in History'
+    meta='Find out what happened on any date.'
+    description='ON THIS DAY, is a tool that allows you to find out what happened on any date in history. Find out what happened on your birthday, or any other day in history.'
+    />
+
+    <Form>
+    <Form.Field>
+      <label>Enter a date:</label>
+      <Input placeholder='MM/DD' />
+    </Form.Field>
+    <Button type='submit' onClick={handleSubmit}>Submit</Button>
+    </Form>
+   
 
   </Container>
   </Grid.Column>
@@ -47,11 +58,11 @@ export default function Home() {
   </Grid.Row>
   </Grid>
 
-<Segment color='teal' inverted className={styles.footer}>
+{/* <Segment color='teal' inverted className={styles.footer}>
     <p>© 2023 MIKEY LEE. All rights reserved. </p>
     <p>[Made with lots of swearing, in Indianapolis.]
     Powered by Next.js and Semantic UI React |  Deployed on Vercel</p>
-  </Segment>
+  </Segment> */}
   </div>
   </>
   );

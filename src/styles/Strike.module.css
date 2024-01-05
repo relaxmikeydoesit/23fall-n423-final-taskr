@@ -25,11 +25,11 @@
 }
 
 .task {
-  width: 1000px;
+  width: 100vw;
   height: 50px;
+  font-size: 18px;
   display: flex;
   margin: 15px;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -38,7 +38,8 @@
   width: 32px;
   height: 32px;
   color: red;
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: 800;
     margin-left: 15px;
   text-align: center;
   /* margin-right: 12px; */

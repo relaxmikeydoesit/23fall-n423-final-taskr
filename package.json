@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.8.0",
+    "axios": "^1.6.4",
+    "cheerio": "^1.0.0-rc.12",
     "next": "14.0.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "wikifox": "^2.0.1"
   },
   "devDependencies": {
     "eslint": "^8",

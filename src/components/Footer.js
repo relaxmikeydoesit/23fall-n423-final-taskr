@@ -8,8 +8,7 @@ export default function Footer() {
     <>
     <Segment color='teal' inverted className={styles.footer}>
     <p>© 2023 MIKEY LEE. All rights reserved. </p>
-    <p>[Made with lots of swearing, in Indianapolis.]
-    Powered by Next.js and Semantic UI React |  Deployed on Vercel</p>
+    <div data-tf-live="01HK8DH54CN4TGX59AK8V2SF8N"></div><script src="//embed.typeform.com/next/embed.js"></script>
     </Segment>
       
     </>

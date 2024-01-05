@@ -39,7 +39,7 @@ export default function Strike() {
 
   return (
     <div className="Strike">
-      <div className="addTask">
+      <div className={styles.addTask}>
         <input onChange={handleChange} />
         <button onClick={addTask}> Add Task</button>
       </div>
