@@ -2,11 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
 import { Card, Container, Grid, Image, Segment, Button, FormField, Form, Input } from 'semantic-ui-react'
+// import FetchButtonComponent from '@/components/BoredButton';
 
-function handleSubmit(e) {
-  e.preventDefault();
-  console.log('submitted', e.target.query);
-}
 
 export default function Home() {
   return (
@@ -14,6 +11,7 @@ export default function Home() {
     <div className={styles.box}>
       <p className={styles.signika}>TASKR  ||  Your life, in focus.</p>
     </div>
+
     <div className={styles.page}>
 
     <Grid padded stackable columns={3}>
@@ -21,28 +19,18 @@ export default function Home() {
     <Grid.Column className={styles.rust}>
     <Container className={styles.container}>
     <Card centered 
-    href='/onthisday/[date]'
-    header='Day in History'
-    meta='Find out what happened on any date.'
-    description='ON THIS DAY, is a tool that allows you to find out what happened on any date in history. Find out what happened on your birthday, or any other day in history.'
+    href='/bored'
+    header='Bored?'
+    meta='Bored Button'
+    description='Bored? Click the button. Get a random activity. Do it. Repeat.'    
     />
-
-    <Form>
-    <Form.Field>
-      <label>Enter a date:</label>
-      <Input placeholder='MM/DD' />
-    </Form.Field>
-    <Button type='submit' onClick={handleSubmit}>Submit</Button>
-    </Form>
-   
-
   </Container>
   </Grid.Column>
   <Grid.Column>
   <Container className={styles.green}>
 <Image src= 'robot-wave.png'
  size='medium'
- href='/robot/success' centered />
+ href='/robot' centered />
 </Container>
 </Grid.Column>
   <Grid.Column className={styles.cyan}>
@@ -57,12 +45,14 @@ export default function Home() {
   </Grid.Column>  
   </Grid.Row>
   </Grid>
+  
 
 {/* <Segment color='teal' inverted className={styles.footer}>
     <p>© 2023 MIKEY LEE. All rights reserved. </p>
     <p>[Made with lots of swearing, in Indianapolis.]
     Powered by Next.js and Semantic UI React |  Deployed on Vercel</p>
   </Segment> */}
+
   </div>
   </>
   );

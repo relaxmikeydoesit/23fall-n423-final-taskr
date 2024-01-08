@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import styles from "@/styles/Strike.module.css";
-import { Segment } from 'semantic-ui-react';
 import { Task } from "@/components/Task.js";
 import { Footer } from "@/components/Footer.js";
 
@@ -38,7 +37,7 @@ export default function Strike() {
   };
 
   return (
-    <div className="Strike">
+    <div className={styles.strike}>
       <div className={styles.addTask}>
         <input onChange={handleChange} />
         <button onClick={addTask}> Add Task</button>
@@ -58,7 +57,6 @@ export default function Strike() {
       </div>
       
     </div>
-
   
 
    

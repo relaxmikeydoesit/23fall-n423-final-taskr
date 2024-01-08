@@ -1,14 +1,19 @@
-.Strike {
+.strike {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100vw;
+  height: 75vh;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url(../../public/bg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .addTask {
   height: 30vh;
-  background-color: dodgerblue;
+  background-color: #02a4D3;
   width: 100%;
   display: flex;
   justify-content: center;

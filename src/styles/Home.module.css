@@ -30,32 +30,26 @@
   background-color: #02D476;
 }
 .rowHeight {
-  height: 30vh;
+  height: 20vh;
   justify-content: center;
-  /* margin-bottom: 40px; */
+  align-items: center;
+  margin-top: 100px;
  }
-/* .rowEmpty {
-  height: 10vh;
-  width: 100vw;
-  background-color: #1f2833;
-} */
  
-
-
  .container {
-  padding-top: 50px;
-
+  padding-top: 55px;
+  margin: 40px;
 
   }
   .footer {
-    background-color: #121212;
+    /* background-color: #121212; */
     color: #66fcf1;
     padding: 20px;
     text-align: center;
     font-size: 14px;
     font-family: "Signika";
     height: 10vh;
-    margin-top:  450px;
+    /* margin-top:  350px; */
     
   }
 
@@ -63,15 +57,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 80vh;
+    height: 69vh;
+    background-image: url(../../public/blueorange.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
   }
 
   @media screen and (max-width: 700px) {
     .page {
-      height: 120vh;
+      height: fit-content;
     }
-    /* .footer {
-      margin-bottom: -300px;
-    } */
+    .rowHeight {
+      height: fit-content;
+      justify-content: center;
+      align-items: center;
+     }
+     
+ .container {
+  padding: 20px;
+  /* margin: 20px; */
+
+  }
+     .footer {
+      position: sticky;
+      bottom: 0;
+    } 
   }
     

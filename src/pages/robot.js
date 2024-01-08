@@ -1,31 +1,45 @@
 import React from 'react'; 
-import { Container, Form, Checkbox, Button } from 'semantic-ui-react'
+import { Image, Container, Form, Checkbox, Button } from 'semantic-ui-react';
+import { useRouter } from 'next/router';    
+import styles from '@/styles/Robot.module.css';
 
-export default function Robot() {
+
+export default function RobotSuccess() {
+  const [fullName, setFullName] = React.useState('Mikey Lee');
+  const [email, setEmail] = React.useState('mikeylee@zohomail.com');  
+  
+  const router = useRouter();
+
+  function formSubmit(e) { 
+        e.preventDefault();
+        router.push('/robot/success');            
+        console.log('contact form submitted!');          // console.log('contact form submitted!');
+    }   
     return (
         <>
+        <Image className={styles.herobot} src='greenwide.jpeg' />
+        <div className={styles.robotContainer}>
         <h1>enjoy</h1>
+        <iframe id="ytplayer" type="text/html" width="720" height="405"
+          src="https://www.youtube.com/embed/XnZH4izf_rI?autoplay=1"
+          frameborder="0" allowfullscreen/>
 
-        <div>
-        <iframe width="1120" height="630" src="https://www.youtube.com/embed/XnZH4izf_rI?si=6DfAfjVRGzdhZ5SV?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-
-        <Form >
+        <Form>
     <Form.Field>
-      <label>First Name</label>
-      <input placeholder='First Name' />
+      <label>Full Name</label>
+      <input placeholder='Full Name' />
     </Form.Field>
     <Form.Field>
-      <label>Last Name</label>
-      <input placeholder='Last Name' />
+      <label>Email</label>
+      <input placeholder='Email' />
     </Form.Field>
     <Form.Field>
       <Checkbox label='I agree to leave my infomation in exchange for a free virtual gift, but I will not receive spam messages for this exchange.' />
     </Form.Field>
     <Button type='submit'
-    onClick=''>Submit</Button>
+    onClick={formSubmit}>Submit</Button>
   </Form>
-
+</div>
         </>
     )
 }
